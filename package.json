@@ -1,0 +1,55 @@
+{
+  "name": "donald-gordon-foundation",
+  "description": "Donald Gordon Foundation",
+  "version": "0.0.1",
+  "author": "Peter Bodechtel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sweetlikepete/donald-gordon-foundation"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "watch": "concurrently 'webpack --watch --env.platform=node' 'webpack --watch --env.platform=web'",
+    "build": "rm -rf build && webpack --env.platform=node --env.production && webpack --env.platform=web --env.production",
+    "build:local": "rm -rf build && webpack --env.platform=node && webpack --env.platform=web",
+    "deploy": "npm run build && gcloud app deploy --quiet --project donald-gordon-foundation --verbosity info",
+    "lint": "eslint src",
+    "local": "npm run build:local && concurrently 'npm run watch' 'npm run start:local'",
+    "start:local": "nodemon ./build/server/main.js localhost 8080 --watch build/server",
+    "start": "GCLOUD_PROJECT=questly-nodejs NODE_PATH=src NODE_ENV=production node build/server/main.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@sweetlikepete/eslint-config": "1.0.11",
+    "@typescript-eslint/eslint-plugin": "^1.2.0",
+    "@typescript-eslint/parser": "^1.2.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-universal-import": "^4.0.0",
+    "concurrently": "^4.1.0",
+    "eslint": "^5.12.1",
+    "eslint-plugin-array-func": "^3.1.2",
+    "eslint-plugin-compat": "^2.6.3",
+    "eslint-plugin-eslint-comments": "^3.0.1",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-optimize-regex": "^1.1.6",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-unicorn": "^7.1.0",
+    "nodemon": "^1.18.9",
+    "typescript": "^3.3.1",
+    "webpack": "^4.29.1",
+    "webpack-cli": "^3.2.3",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

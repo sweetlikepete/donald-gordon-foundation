@@ -1,0 +1,10 @@
+{
+  "extends": "@sweetlikepete",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules" : {
+    "import/unambiguous": "off",
+    "@typescript-eslint/indent": "off"
+  }
+}
