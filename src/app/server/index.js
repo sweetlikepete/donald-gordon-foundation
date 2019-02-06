@@ -18,6 +18,7 @@ app.get("/", (req, res) => {
 
 });
 
+// eslint-disable-next-line no-process-env
 const PORT = process.env.PORT || port;
 
 app.listen(PORT, () => {

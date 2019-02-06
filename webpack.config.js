@@ -11,7 +11,9 @@
 
 const path = require("path");
 
+const AssetsPlugin = require("assets-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
+const webpack = require("webpack");
 
 
 const config = function(env){
@@ -60,10 +62,19 @@ const config = function(env){
             ]
         },
         output: {
-            filename: `build/${ env.platform === "web" ? "client" : "server" }/[name]${ platform === "web" ? ".[chunkhash]" : "" }.js`,
-            path: path.resolve(base),
-            publicPath: "/"
+            filename: `${ platform === "web" ? "" : "server/" }[name]${ platform === "web" ? ".[chunkhash]" : "" }.js`,
+            path: path.resolve(base, platform === "web" ? "build/client" : "build"),
+            publicPath: "/static/"
         },
+        plugins: platform === "web" ? [
+            new AssetsPlugin({
+                filename: "build/assets.json",
+                fullpath: true
+            }),
+            new webpack.optimize.ModuleConcatenationPlugin(),
+            new webpack.optimize.OccurrenceOrderPlugin(),
+            new webpack.HashedModuleIdsPlugin()
+        ] : [],
         resolve: {
             extensions: [".js"],
             modules: [
