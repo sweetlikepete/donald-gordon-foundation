@@ -1,0 +1,389 @@
+
+
+div.page--index{
+
+    h2{
+
+        font-size: 23px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .head{
+
+        background: url("/pages/index/images/head-background.jpg") center center no-repeat;
+        background-size: cover;
+        color: #fff;
+        padding: 100px 0 25px 0;
+        text-align: center;
+
+        h1{
+
+            font-size: 40px;
+            line-height: 1.2em;
+            padding: 1px 50px;
+
+            @include media-breakpoint-down(md) {
+
+                padding: 0;
+
+            }
+
+        }
+
+        p{
+
+            font-size: 10px;
+            margin: 0;
+            padding: 4px 30px;
+            line-height: 1.4em;
+
+        }
+
+        ul{
+
+            list-style: none;
+            margin: 0;
+            padding: 35px 0 0 0;
+
+            li{
+
+                display: inline-block;
+
+                a{
+
+                    border: 1px solid #fff;
+                    display: block;
+                    padding: 6px 15px;
+                    min-width: 145px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin: 0 10px;
+                    font-size: 12px;
+                    text-decoration: none;
+                    transition:
+                        background-color .3s ease-in-out,
+                        color .3s ease-in-out
+                    ;
+
+                    &:hover{
+
+                        background-color: #fff;
+                        color: #322949;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .how-we-help{
+
+        text-align: center;
+        padding: 32px 0 0 0;
+
+        h2{
+
+            margin: 0;
+            padding: 0 0 31px 0;
+
+        }
+
+        .row{
+
+            padding: 0 120px;
+
+            @include media-breakpoint-down(md) {
+
+                padding: 0;
+
+            }
+
+        }
+
+        .do-column {
+
+            padding-left: 0;
+            padding-right: 0;
+            transition:background .3s ease-in-out;
+
+            &.selected{
+
+                background: #f0f0f0;
+
+            }
+
+            &:hover{
+
+                background:#f5f5f5;
+
+            }
+
+            &.selected{
+
+                a:before{
+
+                    background-image:url("/pages/index/images/what-we-do-icons-selected.png");
+
+                }
+
+                a:after{
+
+                    opacity: 1;
+
+                }
+
+            }
+
+        }
+
+        a{
+
+            display: block;
+            font-size:11px;
+            text-align:center;
+            text-transform: uppercase;
+            position:relative;
+            min-height:262px;
+            text-decoration: none;
+            color:#1f1a17;
+
+            @include media-breakpoint-down(xs) {
+
+                min-height: auto;
+
+            }
+
+            &:hover{
+
+                color:#1f1a17;
+
+            }
+
+            &:before{
+
+                content:"";
+                display:inline-block;
+                width:75px;
+                height:75px;
+                margin:56px 0 40px 0;
+                background:url("/pages/index/images/what-we-do-icons.png") 0 0 no-repeat;
+                background-size: 375px 75px;
+
+                @include media-breakpoint-down(xs) {
+
+                    margin: 15px 0 10px 0;
+
+                }
+
+            }
+
+            &:after{
+
+                content:"▾";
+                display:block;
+                opacity:0;
+                transition:opacity .3s ease-in-out;
+                width:100%;
+                color:#2a2960;
+                font-size:15px;
+                margin:25px 0 15px 0;
+
+                @include media-breakpoint-down(xs) {
+
+                    margin-top: 15px;
+
+                }
+
+            }
+
+            &.medical-education:before{
+
+                background-position: -150px 0;
+
+            }
+
+            &.business-education:before{
+
+                background-position: -300px 0;
+
+            }
+
+            &.arts-and-culture:before{
+
+                background-position: -225px 0;
+
+            }
+
+            &.conservation-and-environment:before{
+
+                background-position: -75px 0;
+
+            }
+
+            &.welfare:before{
+
+                background-position: 0 0;
+
+            }
+
+            span{
+                display: block;
+            }
+
+        }
+
+
+    }
+
+    .our-projects{
+
+        background:#f0f0f0;
+        padding: 37px 0 32px 0;
+        text-align: center;
+
+        h2{
+
+            margin: 0;
+            padding: 0 0 26px 0;
+
+        }
+
+        .do-box{
+
+            display: none;
+
+            &.selected{
+
+                display: block;
+
+            }
+
+            ul{
+
+                margin:0;
+                padding:0;
+                list-style:none;
+                font-size:0;
+
+                li{
+
+                    display:inline-block;
+                    width:160px;
+                    height:160px;
+                    background:#8a8782;
+                    color:#fff;
+                    position:relative;
+                    margin: 5px;
+                    font-size:12px;
+
+                    &:before{
+
+                        content:"";
+                        display:block;
+                        position:absolute;
+                        top:0;
+                        bottom:50%;
+                        right:0;
+                        left:0;
+                        background-size:cover;
+                        background-repeat:none;
+                        background-position:center center;
+
+                    }
+
+                    &.the-donald-gordon-medical-centre:before{
+
+                        background-image:url("/pages/index/images/how-we-help/the-donald-gordon-medical-centre.jpg");
+
+                    }
+
+                    &.the-gordon-institute-of-business-science:before{
+
+                        background-image:url("/pages/index/images/how-we-help/the-gordon-institute-of-business-science.jpg");
+
+                    }
+
+                    &.wits-business-school:before{
+
+                        background-image:url("/pages/index/images/how-we-help/wits-business-school.jpg");
+
+                    }
+
+                    &.the-donald-gordon-chair-in-business-law:before{
+
+                        background-image:url("/pages/index/images/how-we-help/the-donald-gordon-chair-in-business-law.jpg");
+
+                    }
+
+                    &.the-donald-gordon-chair-in-applied-accounting:before{
+
+                        background-image:url("/pages/index/images/how-we-help/the-donald-gordon-chair-in-applied-accounting.jpg");
+
+                    }
+
+                    &.king-edward-school:before{
+
+                        background-image:url("/pages/index/images/how-we-help/king-edward-school.jpg");
+
+                    }
+
+                    &.creative-voices:before{
+
+                        background-image:url("/pages/index/images/how-we-help/creative-voices.jpg");
+
+                    }
+
+                    &.royal-opera-and-wales-millennium-centre:before{
+
+                        background-image:url("/pages/index/images/how-we-help/royal-opera-and-wales-millennium-centre.jpg");
+
+                    }
+
+                    &.peace-parks-foundation:before{
+
+                        background-image:url("/pages/index/images/how-we-help/peace-parks-foundation.jpg");
+
+                    }
+
+                    &.jewish-welfare:before{
+
+                        background-image:url("/pages/index/images/how-we-help/jewish-welfare.jpg");
+
+                    }
+
+                    &.the-chevra-kadisha:before{
+
+                        background-image:url("/pages/index/images/how-we-help/the-chevra-kadisha.jpg");
+
+                    }
+
+                    span{
+
+                        position:absolute;
+                        top:50%;
+                        bottom:0;
+                        left:0;
+                        right:0;
+                        padding:10px;
+                        font-weight:bold;
+                        display:flex;
+                        align-items: center;
+                        justify-content: center;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,293 @@
+
+
+@import "bootstrap/scss/bootstrap-reboot.scss";
+@import "bootstrap/scss/bootstrap-grid.scss";
+
+
+$background: #fff;
+$color: #444;
+$font-family: "Aviner Light", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+$font-size: 13px;
+$font-weight: normal;
+
+$heading-font-weight: normal;
+
+$h1-font-size: 36px;
+$h2-font-size: 24px;
+$h3-font-size: 17px;
+$h4-font-size: 15px;
+$h5-font-size: 14px;
+$h6-font-size: 12px;
+
+$highlight-background: rgba(239, 201, 23, .99);
+$highlight-color: #555;
+$highlight-shadow: none;
+
+$link-color: #2479c1;
+$link-color-disabled: #ccc;
+$link-color-hover: #2479c1;
+
+
+*,
+*::before,
+*::after{
+
+    box-sizing: inherit;
+
+}
+
+*:focus{
+
+    outline: none;
+
+}
+
+html{
+
+    box-sizing: border-box;
+    text-size-adjust: 100%;
+
+}
+
+body{
+
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    background: $background;
+    box-sizing: border-box;
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    height: 100vh;
+    margin: 0;
+    overflow: visible;
+    overflow-x: hidden;
+    padding: 0;
+    position: relative;
+    text-rendering: optimizeLegibility;
+
+    *::selection{
+
+        background: $highlight-background;
+        color: $highlight-color;
+        text-shadow: $highlight-shadow;
+
+    }
+
+}
+
+img{
+
+    user-select: none;
+
+}
+
+a{
+
+    color: $link-color;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+
+    &:hover{
+
+        text-decoration: underline;
+
+    }
+
+    img{
+
+        border: 0;
+
+    }
+
+    &.disabled{
+
+        color: $link-color-disabled;
+        cursor: not-allowed;
+
+    }
+
+}
+
+form{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-weight: $heading-font-weight;
+
+}
+
+h1{
+
+    font-size: $h1-font-size;
+
+}
+
+h2{
+
+    font-size: $h2-font-size;
+
+}
+
+h3{
+
+    font-size: $h3-font-size;
+
+}
+
+h4{
+
+    font-size: $h4-font-size;
+
+}
+
+h5{
+
+    font-size: $h5-font-size;
+
+}
+
+h6{
+
+    font-size: $h6-font-size;
+
+}
+
+p{
+
+    margin: 10px 0;
+    padding: 0;
+
+}
+
+ul{
+
+    padding: 0 0 10px 1.1em;
+
+}
+
+body{
+
+    background: #fff;
+
+}
+
+nav{
+
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+
+    .container{
+
+        position: relative;
+
+    }
+
+    p{
+
+        font-family: "Aviner Heavy";
+        font-size: 13px;
+        float: left;
+        margin: 0;
+        padding: 27px 0 0 8px;
+
+    }
+
+    ul{
+
+        float: right;
+        margin: 0;
+        padding: 23px 0 0 0;
+        list-style: none;
+        text-transform: uppercase;
+        font-size: 0;
+        position:relative;
+        right: -10px;
+
+        @include media-breakpoint-down(sm) {
+
+           display: none;
+
+        }
+
+        li{
+
+            display: inline;
+
+        }
+
+        a{
+
+            font-size: 9px;
+            display: inline-block;
+            color:#fff;
+            padding:6px 10px 5px 10px;
+            border:1px solid rgba(255, 255, 255, 0);
+            border-right:1px solid rgba(255, 255, 255, 1);
+            font-size: 8px;
+            transition: border .3s ease-in-out;
+            margin:0 -1px 0 0;
+
+            &:last-child{
+
+                border-right: 1px solid rgba(255, 255, 255, 0);
+
+            }
+
+            &:hover{
+
+                color:#fff;
+                text-decoration:none;
+                border:1px solid rgba(255, 255, 255, 1);
+
+            }
+
+        }
+
+    }
+
+}
+
+footer{
+
+    background: #8a8782;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+    a,
+    a:hover{
+
+        color: #fff;
+
+    }
+
+}
+
+@include media-breakpoint-up(md) {
+
+    .container {
+
+        max-width: 960px;
+
+    }
+
+}
+
+@import "pages/index/index.scss";

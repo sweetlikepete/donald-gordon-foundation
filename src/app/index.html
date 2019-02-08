@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=0, viewport-fit=cover">
+
+        <title>
+            {{ metadata.title }}
+        </title>
+
+        <meta name="description" content="{{ metadata.description }}">
+        <meta name="title" content="{{ metadata.title }}">
+
+        <base href="/">
+
+        <link rel="canonical" href="https://{{ host }}{{ req.path }}">
+
+        <link rel="shortcut icon" sizes="32x32" href="/images/favicon.png">
+
+        <link rel="manifest" href="/manifest.json">
+
+        <meta name="theme-color" content="{{ colors.theme }}">
+
+        <link rel="apple-touch-icon" href="/images/app-icons/48x48.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/app-icons/72x72.png">
+        <link rel="apple-touch-icon" sizes="96x96" href="/images/app-icons/96x96.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/app-icons/144x144.png">
+        <link rel="apple-touch-icon" sizes="192x192" href="/images/app-icons/192x192.png">
+
+        <meta name="msapplication-TileImage" content="/images/app-icons/144x144.png">
+        <meta name="msapplication-TileColor" content="{{ colors.theme }}">
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <meta name="referrer" content="always">
+
+        <meta itemprop="name" content="{{ metadata.title }}">
+        <meta itemprop="description" content="{{ metadata.description }}">
+        <meta itemprop="image" content="{{ metadata.image }}">
+
+        <meta property="og:title" content="{{ metadata.title }}">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://{{ host }}/">
+        <meta property="og:image" content="{{ metadata.image }}">
+        <meta property="og:description" content="{{ metadata.description }}">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="{{ metadata.twitter.user }}">
+        <meta name="twitter:title" content="{{ metadata.title }}">
+        <meta name="twitter:description" content="{{ metadata.description }}">
+        <meta name="twitter:image" content="{{ metadata.image }}">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="{{ assets.main.js }}"></script>
+
+        <style type="text/css">
+
+            @font-face {
+
+                font-family: "Aviner Light";
+                src: url("/fonts/Avenir-Light.ttf") format("truetype");
+
+            }
+
+            @font-face {
+
+                font-family: "Aviner Heavy";
+                src: url("/fonts/Avenir-Heavy.ttf") format("truetype");
+
+            }
+
+        </style>
+
+        <link rel="stylesheet" href="{{ assets.main.css }}">
+
+    </head>
+
+    <body>
+
+        <div style="display:none;position:absolute;pointer-events:none;top:0;left:0;width:100%;height:4400px;opacity:.3;background:url(/images/overlay.jpg) center 0 no-repeat; background-size: 960px 4400px;"></div>
+
+        <nav>
+
+            <div class="container">
+
+                <p>The Donald Gordon Foundation</p>
+
+                <ul>
+                    <li>
+                        <a href="">Welcome</a>
+                        <a href="">Projects</a>
+                        <a href="">About</a>
+                        <a href="">What we do</a>
+                        <a href="">Related</a>
+                        <a href="">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <main>
+
+            {% block main %}{% endblock %}
+
+        </main>
+
+        <footer>
+
+            <div class="container">
+
+                <p>
+                    The Donald Gordon Foundation
+                    <br />
+                    PO Box 8749 Johannesburg | 2000
+                </p>
+
+                <p>
+                    E: <a href="mailto:info@donaldgordon.org">info@donaldgordon.org</a>
+                </p>
+
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>
