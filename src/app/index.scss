@@ -9,6 +9,7 @@ $color: #444;
 $font-family: "Aviner Light", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
 $font-size: 13px;
 $font-weight: normal;
+$nav-height: 50px;
 
 $heading-font-weight: normal;
 
@@ -186,12 +187,36 @@ body{
 
 nav{
 
-    left: 0;
-    padding: 10px;
-    position: absolute;
-    top: 0;
-    width: 100%;
     color: #fff;
+
+    &.hidden div.bar{
+
+        box-shadow: none;
+        transform: translate3d(0, -100%, 0);
+
+    }
+
+    &.offset{
+
+        div.bar{
+
+            background: #1f1a17;
+
+        }
+
+        p{
+
+            padding: 17px 0 0 8px;
+
+        }
+
+        ul{
+
+            padding: 9px 0 0 0;
+
+        }
+
+    }
 
     .container{
 
@@ -201,6 +226,7 @@ nav{
 
     p{
 
+        transition: padding .25s cubic-bezier(0, 0, .3, 1);
         font-family: "Aviner Heavy";
         font-size: 13px;
         float: left;
@@ -211,6 +237,7 @@ nav{
 
     ul{
 
+        transition: padding .25s cubic-bezier(0, 0, .3, 1);
         float: right;
         margin: 0;
         padding: 23px 0 0 0;
@@ -256,6 +283,48 @@ nav{
                 text-decoration:none;
                 border:1px solid rgba(255, 255, 255, 1);
 
+            }
+
+        }
+
+    }
+
+    div.bar{
+
+        background: transparent;
+        color: #fff;
+        font-size: 13px;
+        font-weight: normal;
+        left: 0;
+        line-height: 19px;
+        // Fallback is used for devices with no notch
+        padding: 0;
+        // iOS 11 notch devices
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
+        // iOS 11.2+ notch devices
+        // This lint violation is needed to create fallbacks in iOS safari
+        // sass-lint:disable no-duplicate-properties
+        padding-left: env(safe-area-inset-left); // sass
+        padding-right: env(safe-area-inset-right);
+        // sass-lint:enable no-duplicate-properties
+        position: fixed;
+        text-align: center;
+        text-transform: uppercase;
+        top: 0;
+        transition: .25s cubic-bezier(0, 0, .3, 1);
+        width: 100%;
+        will-change: transform;
+        z-index: 1;
+
+        .wrap{
+
+            height: $nav-height;
+            width: 100%;
+
+            html.backdropfilter body.glass-bar &{
+                backdrop-filter: saturate(default);
+                transition: backdrop-filter .3s ease-in-out;
             }
 
         }
