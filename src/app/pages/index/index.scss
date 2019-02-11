@@ -4,6 +4,7 @@ div.page--index{
 
     h2{
 
+        text-align: center;
         font-size: 23px;
         margin: 0;
         padding: 0;
@@ -381,6 +382,336 @@ div.page--index{
                 }
 
             }
+
+        }
+
+    }
+
+    .about{
+
+        background:url("/pages/index/images/about-us-background.jpg") -50vw 50% no-repeat;
+        background-size: cover;
+
+        @include media-breakpoint-down(sm) {
+
+            background: none;
+            padding: 20px 0;
+
+        }
+
+        .col-md{
+
+            padding: 38px 43px;
+
+            @include media-breakpoint-down(sm) {
+
+                padding: 0;
+
+            }
+
+            &:first-child{
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+        }
+
+        h2{
+
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 40px;
+
+            @include media-breakpoint-down(sm) {
+
+                color:#1f1a17;
+
+            }
+
+        }
+
+    }
+
+    .trustees{
+
+        padding: 32px 0 0;
+        background: #f0f0f0;
+
+        ul{
+
+            list-style: none;
+            margin: 0;
+            padding: 25px 50px 32px 50px;
+            text-align: center;
+
+            li{
+
+                display: inline-block;
+
+                a{
+
+                    display: block;
+                    width: 220px;
+                    background:#fff;
+                    padding:11px 15px;
+                    margin: 5px;
+                    text-align: left;
+                    color:#1f1a17;
+                    position:relative;
+
+                    &:after{
+                        content:"...";
+                        position:absolute;
+                        right:15px;
+                        font-size:24px;
+                        top:0;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .what-we-do{
+
+        h2{
+
+            font-size: 20px;
+
+        }
+
+        > h2{
+
+            background:url("/pages/index/images/what-we-do-background.jpg") 50% 50% no-repeat;
+            background-size:cover;
+            padding:120px 30px 100px 30px;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 40px;
+            line-height:0;
+
+        }
+
+        h3{
+
+            font-size: 23px;
+            text-align: center;
+            margin:0 auto;
+            padding: 15px 0;
+
+            span{
+
+                display:inline-block;
+                position:relative;
+
+            }
+
+            span:after{
+
+                content: "▾";
+                position: absolute;
+                top: 0;
+                font-size: 33px;
+                line-height: 1em;
+                right: -40px;
+
+
+            }
+
+        }
+
+        .copy{
+
+            padding: 32px 45px;
+
+        }
+
+        ul.boxes{
+
+            margin:0;
+            padding:10px 0;
+            list-style:none;
+
+
+            li{
+                display:block;
+                background:#f0f0f0;
+                padding:15px 15px 15px 70px;
+                margin:1px 0 0 0;
+                position:relative;
+
+                &:before{
+
+                    content:"";
+                    display:inline-block;
+                    width:75px;
+                    height:75px;
+                    background:url("/pages/index/images/what-we-do-icons-selected.png") 0 0 no-repeat;
+                    background-size: 375px 75px;
+                    position:absolute;
+                    left:0;
+                    top:-15px;
+                    transform:scale(.4);
+
+                }
+
+                &.medical-education:before{
+
+                    background-position: -150px 0;
+
+                }
+
+                &.business-education:before{
+
+                    background-position: -300px 0;
+
+                }
+
+                &.arts-and-culture:before{
+
+                    background-position: -225px 0;
+
+                }
+
+                &.conservation-and-environment:before{
+
+                    background-position: -75px 0;
+
+                }
+
+                &.welfare:before{
+
+                    background-position: 0 0;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .related-links{
+
+        h2:first-child{
+
+            background:url("/pages/index/images/related-links-background.jpg") 50% 50% no-repeat;
+            background-size:cover;
+            padding:120px 30px 100px 30px;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 40px;
+            line-height:0;
+
+        }
+
+        .cappo-logo{
+
+            background: #f0f0f0 url("/pages/index/images/capco-logo.png") 50% 50% no-repeat;
+            padding:50px;
+            background-size:200px;
+            margin:40px 0;
+
+        }
+
+        h3{
+
+            font-size: 23px;
+            text-align: center;
+            margin:0 auto;
+            padding: 15px 0;
+
+        }
+
+        .projects {
+
+            text-align: center;
+            margin:0;
+            padding:15px 0;
+            list-style:none;
+
+            li{
+                display:inline;
+            }
+
+            a{
+
+                display: inline-block;
+                background-repeat:no-repeat;
+                background-size:220px 100px !important;
+                width: 220px;
+                height:100px;
+                background:#f0f0f0;
+                margin:5px;
+
+                &.nelson-mandela-childrens-fund{
+                    background-image:url("/pages/index/images/logos/nelson-mandela-childrens-fund.png");
+                }
+
+                &.helen-suzman-foundation{
+                    background-image:url("/pages/index/images/logos/helen-suzman-foundation.png");
+                }
+
+                &.royal-opera-house{
+                    background-image:url("/pages/index/images/logos/royal-opera-house.png");
+                }
+
+                &.choc{
+                    background-image:url("/pages/index/images/logos/choc.png");
+                }
+
+                &.eyebank-foundation-sa{
+                    background-image:url("/pages/index/images/logos/eyebank-foundation-sa.png");
+                }
+
+                &.gsb{
+                    background-image:url("/pages/index/images/logos/gsb.png");
+                }
+
+                &.orca{
+                    background-image:url("/pages/index/images/logos/orca.png");
+                }
+
+                &.wales-millennium-center{
+                    background-image:url("/pages/index/images/logos/wales-millennium-center.png");
+                }
+
+                &.red-cross{
+                    background-image:url("/pages/index/images/logos/red-cross.png");
+                }
+
+            }
+
+        }
+
+    }
+
+    .contacting-us{
+
+        background: #1f1a17;
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+
+        p{
+
+            font-size:11px;
+
+        }
+
+        a,
+        a:hover{
+
+            color: #fff;
 
         }
 
