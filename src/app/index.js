@@ -133,6 +133,7 @@ $(() => {
     $(".how-we-help .do-column").click((evt) => {
 
         $(".how-we-help .do-column").removeClass("selected");
+        $(".do-copy").removeClass("selected");
 
         $(evt.currentTarget).addClass("selected");
 
@@ -161,6 +162,18 @@ $(() => {
         evt.preventDefault();
 
         return false;
+
+    });
+
+    $(".do-box li").click((evt) => {
+
+        $(".do-copy").removeClass("selected");
+        $(".do-box li").removeClass("selected");
+
+        const cls = $(evt.currentTarget).attr("class");
+
+        $(evt.currentTarget).addClass("selected");
+        $(`.do-copy.${ cls }`).addClass("selected");
 
     });
 

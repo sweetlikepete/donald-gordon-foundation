@@ -129,7 +129,7 @@ div.page--index{
 
                 a:before{
 
-                    background-image:url("/pages/index/images/what-we-do-icons-selected.png");
+                    background-image:url("/pages/index/images/how-we-help-icons-selected.png");
 
                 }
 
@@ -173,8 +173,8 @@ div.page--index{
                 width:75px;
                 height:75px;
                 margin:56px 0 40px 0;
-                background:url("/pages/index/images/what-we-do-icons.png") 0 0 no-repeat;
-                background-size: 375px 75px;
+                background:url("/pages/index/images/how-we-help-icons.png") 0 0 no-repeat;
+                background-size: 225px 75px;
 
                 @include media-breakpoint-down(xs) {
 
@@ -203,31 +203,19 @@ div.page--index{
 
             }
 
-            &.medical-education:before{
+            &.encouraging-excellence:before{
 
                 background-position: -150px 0;
 
             }
 
-            &.business-education:before{
-
-                background-position: -300px 0;
-
-            }
-
-            &.arts-and-culture:before{
-
-                background-position: -225px 0;
-
-            }
-
-            &.conservation-and-environment:before{
+            &.protecting-democracy:before{
 
                 background-position: -75px 0;
 
             }
 
-            &.welfare:before{
+            &.caring-for-community:before{
 
                 background-position: 0 0;
 
@@ -280,8 +268,15 @@ div.page--index{
                     background:#8a8782;
                     color:#fff;
                     position:relative;
-                    margin: 5px;
+                    margin: 5px 5px 0 5px;
                     font-size:12px;
+                    cursor:pointer;
+
+                    &.selected{
+
+                        background: darken(#8a8782, 10%);
+
+                    }
 
                     &:before{
 
@@ -293,74 +288,54 @@ div.page--index{
                         right:0;
                         left:0;
                         background-size:cover;
-                        background-repeat:none;
+                        background-repeat:no-repeat;
                         background-position:center center;
+                        background-color:#fff;
 
                     }
 
-                    &.the-donald-gordon-medical-centre:before{
+                    &.project-cde:before{
 
-                        background-image:url("/pages/index/images/how-we-help/the-donald-gordon-medical-centre.jpg");
-
-                    }
-
-                    &.the-gordon-institute-of-business-science:before{
-
-                        background-image:url("/pages/index/images/how-we-help/the-gordon-institute-of-business-science.jpg");
+                        background-image:url("/pages/index/images/how-we-help/cde.png");
+                        background-size:contain;
 
                     }
 
-                    &.wits-business-school:before{
+                    &.project-gibs:before{
 
-                        background-image:url("/pages/index/images/how-we-help/wits-business-school.jpg");
-
-                    }
-
-                    &.the-donald-gordon-chair-in-business-law:before{
-
-                        background-image:url("/pages/index/images/how-we-help/the-donald-gordon-chair-in-business-law.jpg");
+                        background-image:url("/pages/index/images/how-we-help/gibs.jpg");
 
                     }
 
-                    &.the-donald-gordon-chair-in-applied-accounting:before{
+                    &.project-stias:before{
 
-                        background-image:url("/pages/index/images/how-we-help/the-donald-gordon-chair-in-applied-accounting.jpg");
-
-                    }
-
-                    &.king-edward-school:before{
-
-                        background-image:url("/pages/index/images/how-we-help/king-edward-school.jpg");
+                        background-image:url("/pages/index/images/how-we-help/stias.jpg");
 
                     }
 
-                    &.creative-voices:before{
+                    &.project-wdgmc:before{
 
-                        background-image:url("/pages/index/images/how-we-help/creative-voices.jpg");
-
-                    }
-
-                    &.royal-opera-and-wales-millennium-centre:before{
-
-                        background-image:url("/pages/index/images/how-we-help/royal-opera-and-wales-millennium-centre.jpg");
+                        background-image:url("/pages/index/images/how-we-help/wdgmc.jpg");
 
                     }
 
-                    &.peace-parks-foundation:before{
+                    &.project-section27:before{
 
-                        background-image:url("/pages/index/images/how-we-help/peace-parks-foundation.jpg");
-
-                    }
-
-                    &.jewish-welfare:before{
-
-                        background-image:url("/pages/index/images/how-we-help/jewish-welfare.jpg");
+                        background-image:url("/pages/index/images/how-we-help/section27.png");
+                        background-size:120px;
 
                     }
 
-                    &.the-chevra-kadisha:before{
+                    &.project-daily-maverick:before{
 
-                        background-image:url("/pages/index/images/how-we-help/the-chevra-kadisha.jpg");
+                        background-image:url("/pages/index/images/how-we-help/daily-maverick.png");
+                        background-size:contain;
+
+                    }
+
+                    &.project-chevrah:before{
+
+                        background-image:url("/pages/index/images/how-we-help/chevrah.jpg");
 
                     }
 
@@ -380,6 +355,22 @@ div.page--index{
                     }
 
                 }
+
+            }
+
+        }
+
+        .do-copy{
+
+            display: none;
+            text-align: left;
+            border:1px solid darken(#8a8782, 10%);
+            background:#fff;
+            padding:15px 30px;
+
+            &.selected{
+
+                display: block;
 
             }
 
@@ -462,6 +453,12 @@ div.page--index{
                     text-align: left;
                     color:#1f1a17;
                     position:relative;
+
+                    &:hover{
+
+                        text-decoration: none;
+
+                    }
 
                     &:after{
                         content:"...";
