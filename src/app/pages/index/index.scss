@@ -16,8 +16,9 @@ div.page--index{
         background: url("/pages/index/images/head-background.jpg") center center no-repeat;
         background-size: cover;
         color: #fff;
-        padding: 100px 0 25px 0;
+        padding: 100px 0 50px 0;
         text-align: center;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
 
         h1{
 
@@ -35,7 +36,8 @@ div.page--index{
 
         p{
 
-            font-size: 10px;
+            font-size: 12px;
+            font-weight: bold;
             margin: 0;
             padding: 4px 30px;
             line-height: 1.4em;
@@ -380,23 +382,22 @@ div.page--index{
 
     .about{
 
-        background:url("/pages/index/images/about-us-background.jpg") -50vw 50% no-repeat;
+        background:url("/pages/index/images/about-us-background.jpg") center center no-repeat;
         background-size: cover;
 
         @include media-breakpoint-down(sm) {
 
-            background: none;
             padding: 20px 0;
 
         }
 
-        .col-md{
+        .col-md-12{
 
-            padding: 38px 43px;
+            padding: 120px 30px 100px 30px;
 
             @include media-breakpoint-down(sm) {
 
-                padding: 0;
+                padding: 60px 30px 50px 30px;
 
             }
 
@@ -417,62 +418,14 @@ div.page--index{
             text-transform: uppercase;
             font-size: 40px;
 
-            @include media-breakpoint-down(sm) {
-
-                color:#1f1a17;
-
-            }
-
         }
 
     }
 
     .trustees{
 
-        padding: 32px 0 0;
+        padding: 32px 0;
         background: #f0f0f0;
-
-        ul{
-
-            list-style: none;
-            margin: 0;
-            padding: 25px 50px 32px 50px;
-            text-align: center;
-
-            li{
-
-                display: inline-block;
-
-                a{
-
-                    display: block;
-                    width: 220px;
-                    background:#fff;
-                    padding:11px 15px;
-                    margin: 5px;
-                    text-align: left;
-                    color:#1f1a17;
-                    position:relative;
-
-                    &:hover{
-
-                        text-decoration: none;
-
-                    }
-
-                    &:after{
-                        content:"...";
-                        position:absolute;
-                        right:15px;
-                        font-size:24px;
-                        top:0;
-                    }
-
-                }
-
-            }
-
-        }
 
     }
 

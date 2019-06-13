@@ -72,8 +72,6 @@ const initializeScrollDirectionEvents = function(){
 
         st = getScrollTop();
 
-        console.log(forceShowNav);
-
         if(atTop() || forceShowNav){
 
             lastDir = "up";
@@ -143,6 +141,12 @@ $(() => {
         evt.preventDefault();
 
         return false;
+
+    });
+
+    $(".head ul li a").click((evt) => {
+
+        $("nav a[href='" + $(evt.currentTarget).attr("href") + "']").click();
 
     });
 

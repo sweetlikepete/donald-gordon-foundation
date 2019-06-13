@@ -3,6 +3,7 @@
   "description": "Donald Gordon Foundation",
   "version": "0.0.1",
   "author": "Peter Bodechtel",
+  "license": "UNLICENCED",
   "repository": {
     "type": "git",
     "url": "https://github.com/sweetlikepete/donald-gordon-foundation"
