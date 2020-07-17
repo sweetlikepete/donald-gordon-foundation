@@ -22,7 +22,7 @@
     "start": "GCLOUD_PROJECT=questly-nodejs NODE_PATH=src NODE_ENV=production node build/server/main.js"
   },
   "dependencies": {
-    "bootstrap": "^4.2.1",
+    "bootstrap": "^4.3.1",
     "express": "^4.16.4",
     "fs-extra": "^7.0.1",
     "node-sass": "^4.11.0",
