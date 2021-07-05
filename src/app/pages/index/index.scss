@@ -13,7 +13,7 @@ div.page--index{
 
     .head{
 
-        background: url("/pages/index/images/head-background.jpg") center center no-repeat;
+        background: url("./pages/index/images/head-background.jpg") center center no-repeat;
         background-size: cover;
         color: #fff;
         padding: 100px 0 50px 0;
@@ -131,7 +131,7 @@ div.page--index{
 
                 a:before{
 
-                    background-image:url("/pages/index/images/how-we-help-icons-selected.png");
+                    background-image:url("./pages/index/images/how-we-help-icons-selected.png");
 
                 }
 
@@ -175,7 +175,7 @@ div.page--index{
                 width:75px;
                 height:75px;
                 margin:56px 0 40px 0;
-                background:url("/pages/index/images/how-we-help-icons.png") 0 0 no-repeat;
+                background:url("./pages/index/images/how-we-help-icons.png") 0 0 no-repeat;
                 background-size: 225px 75px;
 
                 @include media-breakpoint-down(xs) {
@@ -298,46 +298,46 @@ div.page--index{
 
                     &.project-cde:before{
 
-                        background-image:url("/pages/index/images/how-we-help/cde.png");
+                        background-image:url("./pages/index/images/how-we-help/cde.png");
                         background-size:contain;
 
                     }
 
                     &.project-gibs:before{
 
-                        background-image:url("/pages/index/images/how-we-help/gibs.jpg");
+                        background-image:url("./pages/index/images/how-we-help/gibs.jpg");
 
                     }
 
                     &.project-stias:before{
 
-                        background-image:url("/pages/index/images/how-we-help/stias.jpg");
+                        background-image:url("./pages/index/images/how-we-help/stias.jpg");
 
                     }
 
                     &.project-wdgmc:before{
 
-                        background-image:url("/pages/index/images/how-we-help/wdgmc.jpg");
+                        background-image:url("./pages/index/images/how-we-help/wdgmc.jpg");
 
                     }
 
                     &.project-section27:before{
 
-                        background-image:url("/pages/index/images/how-we-help/section27.png");
+                        background-image:url("./pages/index/images/how-we-help/section27.png");
                         background-size:120px;
 
                     }
 
                     &.project-daily-maverick:before{
 
-                        background-image:url("/pages/index/images/how-we-help/daily-maverick.png");
+                        background-image:url("./pages/index/images/how-we-help/daily-maverick.png");
                         background-size:contain;
 
                     }
 
                     &.project-chevrah:before{
 
-                        background-image:url("/pages/index/images/how-we-help/chevrah.jpg");
+                        background-image:url("./pages/index/images/how-we-help/chevrah.jpg");
 
                     }
 
@@ -382,7 +382,7 @@ div.page--index{
 
     .about{
 
-        background:url("/pages/index/images/about-us-background.jpg") center center no-repeat;
+        background:url("./pages/index/images/about-us-background.jpg") center center no-repeat;
         background-size: cover;
 
         @include media-breakpoint-down(sm) {
@@ -439,7 +439,7 @@ div.page--index{
 
         > h2{
 
-            background:url("/pages/index/images/what-we-do-background.jpg") 50% 50% no-repeat;
+            background:url("./pages/index/images/what-we-do-background.jpg") 50% 50% no-repeat;
             background-size:cover;
             padding:120px 30px 100px 30px;
             text-align: center;
@@ -504,7 +504,7 @@ div.page--index{
                     display:inline-block;
                     width:75px;
                     height:75px;
-                    background:url("/pages/index/images/what-we-do-icons-selected.png") 0 0 no-repeat;
+                    background:url("./pages/index/images/what-we-do-icons-selected.png") 0 0 no-repeat;
                     background-size: 375px 75px;
                     position:absolute;
                     left:0;
@@ -553,7 +553,7 @@ div.page--index{
 
         h2:first-child{
 
-            background:url("/pages/index/images/related-links-background.jpg") 50% 50% no-repeat;
+            background:url("./pages/index/images/related-links-background.jpg") 50% 50% no-repeat;
             background-size:cover;
             padding:120px 30px 100px 30px;
             text-align: center;
@@ -566,7 +566,7 @@ div.page--index{
 
         .cappo-logo{
 
-            background: #f0f0f0 url("/pages/index/images/capco-logo.png") 50% 50% no-repeat;
+            background: #f0f0f0 url("./pages/index/images/capco-logo.png") 50% 50% no-repeat;
             padding:50px;
             background-size:200px;
             margin:40px 0;
@@ -604,39 +604,39 @@ div.page--index{
                 margin:5px;
 
                 &.nelson-mandela-childrens-fund{
-                    background-image:url("/pages/index/images/logos/nelson-mandela-childrens-fund.png");
+                    background-image:url("./pages/index/images/logos/nelson-mandela-childrens-fund.png");
                 }
 
                 &.helen-suzman-foundation{
-                    background-image:url("/pages/index/images/logos/helen-suzman-foundation.png");
+                    background-image:url("./pages/index/images/logos/helen-suzman-foundation.png");
                 }
 
                 &.royal-opera-house{
-                    background-image:url("/pages/index/images/logos/royal-opera-house.png");
+                    background-image:url("./pages/index/images/logos/royal-opera-house.png");
                 }
 
                 &.choc{
-                    background-image:url("/pages/index/images/logos/choc.png");
+                    background-image:url("./pages/index/images/logos/choc.png");
                 }
 
                 &.eyebank-foundation-sa{
-                    background-image:url("/pages/index/images/logos/eyebank-foundation-sa.png");
+                    background-image:url("./pages/index/images/logos/eyebank-foundation-sa.png");
                 }
 
                 &.gsb{
-                    background-image:url("/pages/index/images/logos/gsb.png");
+                    background-image:url("./pages/index/images/logos/gsb.png");
                 }
 
                 &.orca{
-                    background-image:url("/pages/index/images/logos/orca.png");
+                    background-image:url("./pages/index/images/logos/orca.png");
                 }
 
                 &.wales-millennium-center{
-                    background-image:url("/pages/index/images/logos/wales-millennium-center.png");
+                    background-image:url("./pages/index/images/logos/wales-millennium-center.png");
                 }
 
                 &.red-cross{
-                    background-image:url("/pages/index/images/logos/red-cross.png");
+                    background-image:url("./pages/index/images/logos/red-cross.png");
                 }
 
             }

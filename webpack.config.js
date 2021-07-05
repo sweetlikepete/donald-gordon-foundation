@@ -41,11 +41,11 @@ const config = function(env){
 
     return {
         cache: true,
-        devtool: !env.production && platform === "web" ? "source-maps" : "none",
+        devtool: !env.production && platform === "web" ? "inline-source-map" : undefined,
         entry: platform === "web" ? "./src/app" : "./src/server",
         externals: [
             nodeExternals({
-                whitelist: [/^babel-plugin-universal-import/]
+                allowlist: [/^babel-plugin-universal-import/]
             })
         ],
         mode: env.production ? "production" : "development",
@@ -85,8 +85,6 @@ const config = function(env){
                     use: {
                         loader: "html-loader",
                         options: {
-                            attrs: [":data-src"],
-                            interpolate: true,
                             minimize: true
                         }
                     }
@@ -118,26 +116,14 @@ const config = function(env){
                             }
                         },
                         {
-                            loader : "postcss-loader",
-                            options : {
-                                plugins : [
-                                    autoPrefixer({
-                                        browsers : browsers,
-                                        flexbox : "no-2009"
-                                    }),
-                                    fontSmoothing,
-                                    fontVariant,
-                                    imageSet
-                                ]
-                            }
-                        },
-                        {
                             loader : "sass-loader",
                             options : {
-                                includePaths : [
-                                    "src",
-                                    "node_modules"
-                                ]
+                                sassOptions: {
+                                    includePaths : [
+                                        "src",
+                                        "node_modules"
+                                    ]
+                                }
                             }
                         }
                     ]
@@ -182,8 +168,6 @@ const config = function(env){
                 fullpath: true
             }),
             new webpack.optimize.ModuleConcatenationPlugin(),
-            new webpack.optimize.OccurrenceOrderPlugin(),
-            new webpack.HashedModuleIdsPlugin(),
             new MiniCssExtractPlugin({
                 chunkFilename: "[chunkhash:8].css",
                 filename: "[chunkhash:8].css"
