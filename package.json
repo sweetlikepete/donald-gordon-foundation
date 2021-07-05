@@ -19,7 +19,7 @@
     "lint": "eslint src",
     "local": "npm run build:local && concurrently 'npm run watch' 'npm run start:local'",
     "start:local": "nodemon ./build/server/main.js localhost 8080 --watch build/server src/app",
-    "start": "GCLOUD_PROJECT=questly-nodejs NODE_PATH=src NODE_ENV=production node build/server/main.js"
+    "start": "NODE_PATH=src NODE_ENV=production node build/server/main.js"
   },
   "dependencies": {
     "bootstrap": "^5.0.2",
