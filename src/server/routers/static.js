@@ -14,6 +14,8 @@ const staticRouter = function(){
 
     router.use("/images", express.static("src/app/images"));
 
+    router.use("/docs", express.static("src/app/docs"));
+
     router.use("/fonts", express.static("src/app/fonts"));
 
     router.use("/pages", express.static("src/app/pages"));
